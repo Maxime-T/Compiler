@@ -1,11 +1,2 @@
-
-Body[
-  Empty,
-  Statement( Let("x", Opperation((  Add( Value(Scalar(1)), Value(Scalar(2)) )  ))) ),
-  Empty,
-  Statement( Return(  Add( Value(Variable("x")), Value(Scalar(3)) )  ) )
-]
-
-
 let x = 1 + 2;
 return x + 3;
