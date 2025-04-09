@@ -1,5 +1,4 @@
 
-
 #[derive(Debug, Clone, PartialEq)]
 pub enum ValueEnum {
   Variable(String),
@@ -30,8 +29,16 @@ pub enum StatementEnum {
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum LineEnum {
-  Empty,
   Statement(StatementEnum),
 }
 
 pub type Body = Vec<LineEnum>;
+
+#[derive(Debug, Clone, PartialEq)]
+pub enum Node {
+  Value(ValueEnum),
+  Expression(ExpressionEnum),
+  Statement(StatementEnum),
+  Line(LineEnum),
+  Body(Body),
+}

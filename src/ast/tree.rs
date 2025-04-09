@@ -1,14 +1,9 @@
 use std::{fs::File, path::Path};
-use super::grammar::Body;
+use super::grammar::Node;
 
 pub struct Tree {
-  body : Body,
+  pub body : Node,
 }
 
-impl Tree {
-  pub fn from(file : &Path) {
-    let source = File::open(file);
-     
-  }
-}
+
 

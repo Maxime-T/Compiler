@@ -7,3 +7,7 @@ Body[
   Empty,
   Statement( Return(  Add( Value(Variable("x")), Value(Scalar(3)) )  ) )
 ]
+
+let x1 = 1 + 2;
+x1 = 2*(x1 + 1);
+print(x1 + 3);

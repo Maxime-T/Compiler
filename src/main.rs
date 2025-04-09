@@ -1,6 +1,6 @@
 mod ast;
 use std::{fs::File, io::{self, Read}, path::Path};
-use ast::lexer::Token;
+use ast::{lexer::Token, parser};
 use logos::Logos;
 
 fn main() {
@@ -8,12 +8,7 @@ fn main() {
 
     let lexer = Token::lexer(&source);
 
-    for token in lexer {
-        match token {
-            Ok(v) => println!("{:?}", v),
-            Err(_) => {},
-        }
-    }
+    parser::parse(lexer);
 }
 
 
